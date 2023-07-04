@@ -24,6 +24,8 @@ env_variables:
   DB_PASSWORD: Pv=DC9yLcATg@72&
   DB_SOCKET: /cloudsql/team-tem:asia-southeast1:capsuredb
   QUEUE_DRIVER: database
+  beta_settings:
+  cloud_sq_instances: team-tem:asia-southeast1:capsuredb
 
 
 # config runtime
