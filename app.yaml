@@ -25,7 +25,9 @@ env_variables:
   DB_SOCKET: /cloudsql/team-tem:asia-southeast1:capsuredb
   QUEUE_DRIVER: database
   beta_settings:
-  cloud_sql_instances: team-tem:asia-southeast1:capsuredb
+  cloud_sql_instances:
+    - "team-tem:asia-southeast1:capsuredb"
+
 
 
 # config runtime
