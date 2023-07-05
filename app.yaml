@@ -1,7 +1,9 @@
-runtime: php82
+runtime: php
 env: flex
 
 runtime_config:
+  operating_system: "ubuntu22"
+  runtime_version: "8.2"
   document_root: public
 
 skip_files:
