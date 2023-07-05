@@ -53,3 +53,6 @@ $app->singleton(
 */
 
 return $app;
+
+$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
+
