@@ -24,8 +24,8 @@ env_variables:
   DB_SOCKET: "/cloudsql/team-tem:asia-southeast1:capsuredb"
   QUEUE_DRIVER: database
 
-cloud_sql_instances:
-  - "team-tem:asia-southeast1:capsuredb"
+beta_settings:
+  cloud_sql_instances: "team-tem:asia-southeast1:capsuredb"
 
 manual_scaling:
   instances: 1
