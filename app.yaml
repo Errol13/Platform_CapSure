@@ -1,40 +1,36 @@
-runtime: php
+runtime: php82
 env: flex
+
 runtime_config:
-  operating_system: "ubuntu22"
-  runtime_version: "8.2"
   document_root: public
 
 skip_files:
   - .env
 
 env_variables:
-  APP_ENV: local
-  APP_DEBUG: true
+  APP_ENV: production
+  APP_DEBUG: false
   APP_KEY: base64:myGTCURw0AlqAU0uj5KQDYL89jPpeRnef4uK0QAxazA=
   CACHE_DRIVER: database
   SESSION_DRIVER: database
-  APP_LOG: daily
+  APP_LOG: stackdriver
   APP_TIMEZONE: UTC
   DB_CONNECTION: mysql
-  DB_HOST: localhost
+  DB_HOST: 127.0.0.1
   DB_PORT: 3306
   DB_DATABASE: capsuredb
   DB_USERNAME: root
   DB_PASSWORD: Pv=DC9yLcATg@72&
-  DB_SOCKET: /cloudsql/team-tem:asia-southeast1:capsuredb
+  DB_SOCKET: "/cloudsql/team-tem:asia-southeast1:capsuredb"
   QUEUE_DRIVER: database
-  beta_settings:
-  cloud_sql_instances:
-    - "team-tem:asia-southeast1:capsuredb"
 
+cloud_sql_instances:
+  - "team-tem:asia-southeast1:capsuredb"
 
-
-# config runtime
 manual_scaling:
   instances: 1
+
 resources:
   cpu: 1
   memory_gb: 0.5
   disk_size_gb: 10
-  
